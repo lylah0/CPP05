@@ -6,7 +6,7 @@
 /*   By: lylrandr <lylrandr@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 16:21:52 by lylrandr          #+#    #+#             */
-/*   Updated: 2026/01/19 18:34:15 by lylrandr         ###   ########.fr       */
+/*   Updated: 2026/01/22 17:04:14 by lylrandr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,32 @@
 
 # include <iostream>
 # include <string>
+# include <exception>
 
 class Bureaucrat{
 	private :
 		const std::string	_name;
 		int					_grade;
 	public :
+
+		class GradeTooHighException : public std::exception{
+			public :
+				const char* what() const throw(){
+					return ("Exception : Grade too high.");
+				}
+		};
+
+		class GradeTooLowException : public std::exception{
+			public :
+				const char* what() const throw(){
+					return ("Exception : Grade too low.");
+				}
+		};
+
 		Bureaucrat(std::string name, int grade);
 		Bureaucrat(const Bureaucrat& src);
 		Bureaucrat&	operator=(const Bureaucrat& rhs);
 		~Bureaucrat();
-
-		void			GradeTooHighException();
-		void			GradeTooLowException();
 
 		void			incrementGrade();
 		void			decrementGrade();

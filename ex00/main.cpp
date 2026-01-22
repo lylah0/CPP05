@@ -6,46 +6,55 @@
 /*   By: lylrandr <lylrandr@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 18:10:11 by lylrandr          #+#    #+#             */
-/*   Updated: 2026/01/19 18:53:07 by lylrandr         ###   ########.fr       */
+/*   Updated: 2026/01/22 17:17:12 by lylrandr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
+
 int	main(){
-	Bureaucrat	a("Emma", 0);
-	Bureaucrat	b("Elise", 151);
-	std::cout << "\n===test 1 : grade too high" << std::endl;
+	std::cout << "\n===test 1 : Grade too high" << std::endl;
 	try{
-		if (a.getGrade() < 1)
-			throw(a.getGrade());
+		Bureaucrat	a("Emma", 0);
 	}
-	catch(int){
-		a.GradeTooHighException();
+	catch(const std::exception& e){
+		std::cout << e.what() << std::endl;
 	}
-	a.incrementGrade();
-	a.decrementGrade();
-	a.decrementGrade();
-	std::cout << "Grade : " << a.getGrade() << std::endl;
-	a.incrementGrade();
-	std::cout << "Grade : " << a.getGrade() << std::endl;
 
-	std::cout << "\n===test 2 : grade too low" << std::endl;
+	std::cout << "\n===test 2 : Grade too low" << std::endl;
 	try{
-		if (b.getGrade() > 150)
-			throw(b.getGrade());
+		Bureaucrat	b("Elise", 200);
 	}
-	catch(int){
-		b.GradeTooLowException();
+	catch(const std::exception& e){
+		std::cout << e.what() << std::endl;
 	}
-	b.decrementGrade();
-	b.incrementGrade();
-	b.incrementGrade();
-	std::cout << "Grade : " << b.getGrade() << std::endl;
-	b.incrementGrade();
-	std::cout << "Grade : " << b.getGrade() << std::endl;
 
-	std::cout << "\n===test 3 : <<" << std::endl;
-	std::cout << b;
+	std::cout << "\n===test 3 : Increment" << std::endl;
+	try{
+		Bureaucrat	c("Lou", 2);
+		std::cout << c << std::endl;
+		c.incrementGrade();
+		std::cout << c << std::endl;
+		c.incrementGrade();
+		std::cout << c << std::endl;
+	}
+	catch(const std::exception& e){
+		std::cout << e.what() << std::endl;
+	}
+
+	std::cout << "\n===test 4 : Decrement" << std::endl;
+	try{
+		Bureaucrat	d("Robert", 149);
+		std::cout << d << std::endl;
+		d.decrementGrade();
+		std::cout << d << std::endl;
+		d.decrementGrade();
+		std::cout << d << std::endl;
+	}
+	catch(const std::exception& e){
+		std::cout << e.what() << std::endl;
+	}
+
 	return(0);
 }
