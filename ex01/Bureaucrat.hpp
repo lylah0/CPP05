@@ -6,7 +6,7 @@
 /*   By: lylrandr <lylrandr@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 16:21:52 by lylrandr          #+#    #+#             */
-/*   Updated: 2026/01/22 19:55:02 by lylrandr         ###   ########.fr       */
+/*   Updated: 2026/01/27 15:34:27 by lylrandr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ class Bureaucrat{
 
 		void			incrementGrade();
 		void			decrementGrade();
-		void			signForm(Form form);
+		void			signForm(Form& form);
 
 		std::string		getName() const;
 		int				getGrade() const;

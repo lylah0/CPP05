@@ -6,7 +6,7 @@
 /*   By: lylrandr <lylrandr@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 18:13:09 by lylrandr          #+#    #+#             */
-/*   Updated: 2026/01/22 19:46:19 by lylrandr         ###   ########.fr       */
+/*   Updated: 2026/01/27 15:34:10 by lylrandr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ class Form{
 		Form&	operator=(const Form& rhs);
 		~Form();
 
-		void	beSigned(Bureaucrat bureaucrat);
+		void	beSigned(const Bureaucrat& bureaucrat);
 
 		std::string			getName() const;
 		bool				getSignStatus() const;

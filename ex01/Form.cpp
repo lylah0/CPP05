@@ -6,7 +6,7 @@
 /*   By: lylrandr <lylrandr@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 18:28:51 by lylrandr          #+#    #+#             */
-/*   Updated: 2026/01/22 19:45:40 by lylrandr         ###   ########.fr       */
+/*   Updated: 2026/01/27 15:33:57 by lylrandr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ Form::~Form(){
 	std::cout << "Form destrcutor called." << std::endl;
 }
 
-void	Form::beSigned(Bureaucrat bureaucrat){
+void	Form::beSigned(const Bureaucrat& bureaucrat){
 	if (bureaucrat.getGrade() <= _gToSign){
 		_signed = 1;
 		std::cout << bureaucrat.getName() << " signed " << _name << std::endl;

@@ -6,7 +6,7 @@
 /*   By: lylrandr <lylrandr@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 18:10:11 by lylrandr          #+#    #+#             */
-/*   Updated: 2026/01/22 19:38:13 by lylrandr         ###   ########.fr       */
+/*   Updated: 2026/01/27 15:34:54 by lylrandr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void	Bureaucrat::decrementGrade(){
 	throw Bureaucrat::GradeTooLowException();
 }
 
-void	Bureaucrat::signForm(Form form){
+void	Bureaucrat::signForm(Form& form){
 	if (_grade <= form.getGradeToSign())
 		form.beSigned(*this);
 	else{
