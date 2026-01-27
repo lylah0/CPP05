@@ -6,7 +6,7 @@
 /*   By: lylrandr <lylrandr@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 18:10:11 by lylrandr          #+#    #+#             */
-/*   Updated: 2026/01/27 15:34:54 by lylrandr         ###   ########.fr       */
+/*   Updated: 2026/01/27 16:17:23 by lylrandr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	Bureaucrat::signForm(Form& form){
 	if (_grade <= form.getGradeToSign())
 		form.beSigned(*this);
 	else{
-		std::cout << _name << " coulsn't sign " << form.getName()
+		std::cout << _name << " couldn't sign " << form.getName()
 				  << " form because grade too low." << std::endl;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: lylrandr <lylrandr@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/22 18:28:51 by lylrandr          #+#    #+#             */
-/*   Updated: 2026/01/27 15:33:57 by lylrandr         ###   ########.fr       */
+/*   Updated: 2026/01/27 16:17:13 by lylrandr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@ class	Bureaucrat;
 Form::Form(const std::string name, const int gToSign, const int gToExec) : _name(name), _gToSign(gToSign), _gToExec(gToExec){
 	_signed = 0;
 	if (_gToSign < 1)
+		throw ExceptionTooHigh();
+	if (_gToSign > 150)
+		throw ExceptionTooLow();
+	if (_gToExec < 1)
 		throw ExceptionTooHigh();
 	if (_gToExec > 150)
 		throw ExceptionTooLow();
@@ -36,7 +40,7 @@ Form&	Form::operator=(const Form& rhs){
 }
 
 Form::~Form(){
-	std::cout << "Form destrcutor called." << std::endl;
+	std::cout << "Form destructor called." << std::endl;
 }
 
 void	Form::beSigned(const Bureaucrat& bureaucrat){
@@ -63,9 +67,9 @@ int	Form::getGradeToExec() const{
 }
 
 std::ostream&	operator<<(std::ostream& os, const Form& rhs){
-	os << "Form's name : " <<rhs.getName() << " , sign status : " << rhs.getSignStatus()
-						   << ", grade required to sign : " << rhs.getGradeToSign()
-						   << " , grade required to execute : " << rhs.getGradeToExec()
-						   << std::endl;
+	os << "Form's name : " << rhs.getName() << std::endl << "Sign status : " << rhs.getSignStatus()
+						  << std::endl << "Grade required to sign : " << rhs.getGradeToSign()
+						  << std::endl << "Grade required to execute : " << rhs.getGradeToExec()
+						  << std::endl;
 	return (os);
 }
