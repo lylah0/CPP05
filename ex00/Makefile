@@ -6,7 +6,7 @@
 #    By: lylrandr <lylrandr@student.42lausanne.ch>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/19 18:26:12 by lylrandr          #+#    #+#              #
-#    Updated: 2026/01/22 17:25:57 by lylrandr         ###   ########.fr        #
+#    Updated: 2026/06/10 17:59:59 by lylrandr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = Bureaucrat
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRC = main.cpp Bureaucrat.cpp Form.cpp
+SRC = main.cpp Bureaucrat.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

@@ -6,7 +6,7 @@
 /*   By: lylrandr <lylrandr@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/29 15:31:54 by lylrandr          #+#    #+#             */
-/*   Updated: 2026/02/02 18:05:33 by lylrandr         ###   ########.fr       */
+/*   Updated: 2026/06/11 14:35:03 by lylrandr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,11 @@
 #include "PresidentialPardonForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
+#include "Bureaucrat.hpp"
 
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
-
-#include "Bureaucrat.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "PresidentialPardonForm.hpp"
 
 int main()
 {

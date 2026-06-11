@@ -6,7 +6,7 @@
 #    By: lylrandr <lylrandr@student.42lausanne.ch>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/22 17:24:51 by lylrandr          #+#    #+#              #
-#    Updated: 2026/01/27 16:37:08 by lylrandr         ###   ########.fr        #
+#    Updated: 2026/06/11 15:09:18 by lylrandr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = Bureaucrat
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
-SRC = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+SRC = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
